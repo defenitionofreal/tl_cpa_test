@@ -1,7 +1,7 @@
-h1 Тестовое задание от Traffic Light.
+Тестовое задание от Traffic Light.
 =====================
 ***
-###Описание
+### Описание
 
 Создайте веб страницу, которая будет выводить древовидную структуру отделов со списком сотрудников
 
@@ -23,7 +23,7 @@ Django 3+, Python 3.5+, база на свое усмотрение
 Если используете дополнительные библиотеки, то необходимо оформить все в requirements.txt
 
 ***
-###Решение
+### Решение
 
 Чтобы создать и заполнить данные (50.000 сотрудников на 25 разделов) я использовал Faker.
 Написал скрипт и создать новую команду:
@@ -31,7 +31,7 @@ Django 3+, Python 3.5+, база на свое усмотрение
 python manage.py createdata 
 ```
 После запуска команды мы увидим следующее:
-[createdata](https://testingsite.tmweb.ru/pics/cpa_workers.png)
+![createdata](https://testingsite.tmweb.ru/pics/cpa_workers.png)
 
 Чтобы процес наполнения базы был быстрее, можно изменить число в константе NUM_USERS.
 
@@ -40,11 +40,11 @@ python manage.py createdata
 Создал кастомный шаблонный тег. В папке приложения 'templatetags' лежат два файла: в utils хранится логика, в draw_menu создается дерево.
 
 По итогу на веб страницу мы увидим следующее:
-[tree](https://testingsite.tmweb.ru/pics/cpa_tree.png)
+![tree](https://testingsite.tmweb.ru/pics/cpa_tree.png)
 
 
 
-###Установка
+### Установка
 ```
 python3 -m venv venv
 source bin/venv/activate
@@ -61,4 +61,4 @@ python manage.py createdata
 python manage.py loaddata fixtures/db.json
 ```
 По итогу мы увидим следующее:
-[tree](https://testingsite.tmweb.ru/pics/cpa_fixtures.png)
+![fixtures](https://testingsite.tmweb.ru/pics/cpa_fixtures.png)
