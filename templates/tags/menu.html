@@ -1,0 +1,20 @@
+<ul>
+    {% for item in items %}
+    <li>
+        <a href="?{{ other_querystring }}&{{ menu }}={{ item.id }}">{{ item.name }}</a>
+    </li>
+    {% if item.child_items %}
+    {% include 'tags/menu.html' with items=item.child_items %}
+    {% endif %}
+    {% for worker in workers %}
+    {% if worker.subdivision.id == item.id %}
+    <span class="worker">
+          <b>ИФО:</b> {{ worker.full_name }}<br>
+          <b>Должность:</b> {{ worker.position }}<br>
+          <b>Зарплата:</b> {{ worker.salary }} руб.<br>
+          <b>Дата найма:</b> {{ worker.hiring }}
+    </span>
+    {% endif %}
+    {% endfor %}
+    {% endfor %}
+</ul>
